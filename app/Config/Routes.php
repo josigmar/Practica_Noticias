@@ -6,7 +6,5 @@ use App\Controllers\News;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
-
-$routes->get('news', [News::class, 'index']);
+$routes->get('/', [News::class, 'index']);
 $routes->get('news/(:segment)', [News::class, 'show']);

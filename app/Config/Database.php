@@ -28,7 +28,7 @@ class Database extends Config
         'DSN'          => '',
         'hostname'     => 'localhost',
         'username'     => 'josemanuelsantamargarita_newsJos',
-        'password'     => '',
+        'password'     => 'newsJos123|@#',
         'database'     => 'josemanuelsantamargarita_news',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',

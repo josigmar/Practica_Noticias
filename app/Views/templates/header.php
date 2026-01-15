@@ -213,9 +213,7 @@
             <li class="menu-toggle">
                 <button id="menuToggle">&#9776;</button>
             </li>
-            <li class="menu-item hidden"><a href="<?= base_url('pages') ?>">Pages</a></li>
-            <li class="menu-item hidden"><a href="<?= base_url('home') ?>">Home</a></li>
-            <li class="menu-item hidden"><a href="<?= base_url('about') ?>">About</a></li>
+            <li class="menu-item hidden"><a href="<?= base_url('/') ?>">News</a></li>
         </ul>
     </div>
 
