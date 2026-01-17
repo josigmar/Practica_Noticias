@@ -6,6 +6,10 @@
             <div class="main">
                 <?= esc($news_item['body']) ?>
             </div>
+            <br>
+            <div class="main">
+                Categoría: <b><?= esc($news_item['category']) ?></b>
+            </div>
             <p><a href="<?= base_url('news/' . $news_item['slug']) ?>">View article</a></p>
         <?php endforeach ?>
     <?php else: ?>
