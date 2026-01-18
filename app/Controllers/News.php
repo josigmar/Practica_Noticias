@@ -23,9 +23,9 @@ class News extends BaseController {
         $model_cat = model(CategoriesModel::class);
         $data['categories'] = $model_cat->findAll();
 
-        return view ('templates/header', $data)
-            . view('news/index')
-            . view ('templates/footer');
+        return view ('frontend/templates/header', $data)
+            . view('frontend/news/index')
+            . view ('frontend/templates/footer');
     }
 
     public function show($slug = null) {
@@ -42,8 +42,8 @@ class News extends BaseController {
         $model_cat = model(CategoriesModel::class);
         $data['categories'] = $model_cat->findAll();
 
-        return view ('templates/header', $data)
-            . view('news/view')
-            . view ('templates/footer');
+        return view ('frontend/templates/header', $data)
+            . view('frontend/news/view')
+            . view ('frontend/templates/footer');
     }
 }
