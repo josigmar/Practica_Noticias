@@ -22,6 +22,8 @@ class News extends BaseController {
 
         $model_cat = model(CategoriesModel::class);
         $data['categories'] = $model_cat->findAll();
+        $data['headingNews'] = $model->headingNews();
+        $data['lastestNews'] = $model->lastestNews();
 
         return view ('frontend/templates/header', $data)
             . view('frontend/news/index')

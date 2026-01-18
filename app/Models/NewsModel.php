@@ -30,4 +30,18 @@ class NewsModel extends Model {
         $sql = $this->where(['id_category' => $id_category])->findAll();
         return $sql;
     }
+
+    public function headingNews() {
+        $sql = $this->select('news.*, categories.category');
+        $sql = $this->join('categories', 'news.id_category = categories.id');
+        $sql = $this->first();
+        return $sql;
+    }
+
+    public function lastestNews() {
+        $sql = $this->select('news.*, categories.category');
+        $sql = $this->join('categories', 'news.id_category = categories.id');
+        $sql = $this->findAll(2,1);
+        return $sql;
+    }
 }

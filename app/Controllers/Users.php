@@ -44,9 +44,7 @@ class Users extends BaseController {
             $session = session();
             $session->set('user', $post['username']);
 
-            return view('frontend/templates/header', $data)
-                . view('backend/users/admin', ['title' => 'Admin'])
-                .view('frontend/templates/footer');
+            return redirect()->to(base_url('backend'));
         } else {
             return $this->loginForm("Error");
         }

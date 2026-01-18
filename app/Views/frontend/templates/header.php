@@ -230,7 +230,7 @@
             <a
               class="blog-header-logo text-body-emphasis text-decoration-none"
               href="#"
-              >Large</a
+              >The DWAaTimes</a
             >
           </div>
           <div class="col-4 d-flex justify-content-end align-items-center">
@@ -253,11 +253,23 @@
                 <path d="M21 21l-5.2-5.2"></path>
               </svg>
             </a>
-            <a class="btn btn-sm btn-outline-secondary" href="<?= base_url('/') ?>">News</a>
-            <a class="btn btn-sm btn-outline-secondary" href="<?= base_url('admin') ?>">Sign up</a>
             <?php $session = session();
             if (!empty($session->get('user'))): ?>
-              <a class="btn btn-sm btn-outline-secondary" href="<?= base_url('session') ?>">Close session</a>
+              <div class="d-flex align-items-center gap-2">
+                <span class="text-body-secondary small mb-0">
+                  <?= "Bienvenid@ " . esc($session->get('user')) ?>
+                </span>
+                <a class="btn btn-sm btn-outline-secondary" href="<?= base_url('session') ?>">
+                  Close session
+                </a>
+              </div>
+            <?php else: ?>
+              <a class="btn btn-sm btn-outline-secondary" href="<?= base_url('/') ?>">
+                News
+              </a>
+              <a class="btn btn-sm btn-outline-secondary" href="<?= base_url('admin') ?>">
+                Sign in
+              </a>             
             <?php endif ?>
           </div>
         </div>
@@ -266,7 +278,7 @@
         <nav class="nav nav-underline justify-content-between">
             <?php if ($categories !== []): ?>
                 <?php foreach ($categories as $categories_item): ?>
-                    <a class="nav-item nav-link link-body-emphasis" href="<?= base_url('/' . $categories_item['id']) ?>">
+                    <a class="nav-item nav-link link-body-emphasis" href="<?= base_url('category/' . $categories_item['id']) ?>">
                         <?= esc($categories_item['category']) ?>
                     </a>
                 <?php endforeach ?>
