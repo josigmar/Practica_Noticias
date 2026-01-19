@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome to CodeIgniter 4!</title>
+    <title>The DWAaTimes</title>
     <meta name="description" content="The small framework with powerful features">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="/favicon.ico">
@@ -212,10 +212,12 @@
             <li class="menu-toggle">
                 <button id="menuToggle">&#9776;</button>
             </li>
+            <li class="menu-item hidden"><a href="<?= base_url('/') ?>">Show Page</a></li>
             <li class="menu-item hidden"><a href="<?= base_url('backend') ?>">News</a></li>
-            <li class="menu-item hidden"><a href="<?= base_url('backend') ?>">Add News</a></li>
+            <li class="menu-item hidden"><a href="<?= base_url('backend/news/new') ?>">Add News</a></li>
             <li class="menu-item hidden"><a href="<?= base_url('backend') ?>">Categories</a></li>
             <li class="menu-item hidden"><a href="<?= base_url('backend') ?>">Add Categories</a></li>
+            <li class="menu-item hidden"><a href="<?= base_url('session') ?>">Close Session</a></li>
         </ul>
     </div>
 </header>

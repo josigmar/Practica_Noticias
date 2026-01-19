@@ -10,7 +10,9 @@
             <div class="main">
                 Categoría: <b><?= esc($news_item['category']) ?></b>
             </div>
-            <p><a href="<?= base_url('backend/news/' . $news_item['slug']) ?>">View article</a></p>
+            <a href="<?= base_url('backend/news/' . $news_item['slug']) ?>">View</a>
+            <a href="<?= base_url('backend/news/update/' . $news_item['id']) ?>">Edit</a>
+            <a href="<?= base_url('backend/news/del/' . $news_item['id']) ?>">Delete</a>
         <?php endforeach ?>
     <?php else: ?>
         <h3>No news</h3>

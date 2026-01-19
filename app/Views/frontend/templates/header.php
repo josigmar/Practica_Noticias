@@ -9,7 +9,7 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Astro v5.13.2" />
-    <title>Blog Template · Bootstrap v5.3</title>
+    <title>The DWAaTimes</title>
     <link
       rel="canonical"
       href="https://getbootstrap.com/docs/5.3/examples/blog/"
@@ -229,7 +229,7 @@
           <div class="col-4 text-center">
             <a
               class="blog-header-logo text-body-emphasis text-decoration-none"
-              href="#"
+              href="<?= base_url('/') ?>"
               >The DWAaTimes</a
             >
           </div>
@@ -259,6 +259,9 @@
                 <span class="text-body-secondary small mb-0">
                   <?= "Bienvenid@ " . esc($session->get('user')) ?>
                 </span>
+                <a class="btn btn-sm btn-outline-secondary" href="<?= base_url('backend') ?>">
+                  Admin panel
+                </a>
                 <a class="btn btn-sm btn-outline-secondary" href="<?= base_url('session') ?>">
                   Close session
                 </a>

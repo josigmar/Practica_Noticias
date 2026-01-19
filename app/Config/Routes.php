@@ -30,6 +30,20 @@ Los grupos permiten no tener que escribir en cada ruta backend/...algo...
 Cada ruta dentro del grupo será como si empezase por backend/ (vamos son un prefijo)
 */
 $routes->group('backend', function($routes){
-    $routes->get('', [NewsBackend::class, 'index']);
+    $routes->get('', [NewsBackend::class, 'index']); 
+
+    //Formulario de insertar:
+    $routes->get('news/new', [NewsBackend::class, 'new']);
+    //Enviar el formulario insertar:
+    $routes->post('news/create', [NewsBackend::class, 'create']);
+
+    //Formulario de edición:
+    $routes->get('news/update/(:num)', [NewsBackend::class, 'update']);
+    //Enviar el formulario editar:
+    $routes->post('news/updatedItem/(:num)', [NewsBackend::class, 'updatedItem']);
+
+    //Eliminar noticia
+    $routes->get('news/del/(:num)', [NewsBackend::class, 'delete']);
+
     $routes->get('news/(:segment)', [NewsBackend::class, 'show']);
 });

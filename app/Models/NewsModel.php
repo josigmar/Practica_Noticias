@@ -4,6 +4,8 @@ use CodeIgniter\Model;
 
 class NewsModel extends Model {
     protected $table = 'news';
+
+    protected $allowedFields = ['title', 'slug', 'body', 'id_category', 'image'];
     /**
      * @param false | string $slug
      * 
