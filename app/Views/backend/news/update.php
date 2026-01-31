@@ -22,7 +22,7 @@
             <?php if (!empty($category) && is_array($category)): ?>     
                 <?php foreach ($category as $category_item): ?>
                     <option value="<?= $category_item['id'] ?>" 
-                    <?= ($category_item['id'] == $news['id_category']) ? 'selected' : '' ?>>                         
+                        <?= ($category_item['id'] == $news['id_category']) ? 'selected' : '' ?>>                         
                         <?= $category_item['category'] ?> 
                     </option> 
                 <?php endforeach ?>
